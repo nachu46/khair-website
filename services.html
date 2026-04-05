@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services — Khair IT Solutions</title>
+<meta name="description" content="Digital Marketing, Shopify Store Development, Web Development, and Software & POS Systems by Khair IT Solutions."/>
+<link rel="stylesheet" href="shared.css"/>
+<style>
+.services-full { margin-top: 80px; }
+.service-block {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  padding: 80px 0; border-bottom: 1px solid var(--border);
+}
+.service-block:last-child { border-bottom: none; }
+.service-block.flip { direction: rtl; }
+.service-block.flip > * { direction: ltr; }
+.sb-tag { display: inline-block; background: rgba(200,240,62,.1); border: 1px solid rgba(200,240,62,.2); color: var(--accent); border-radius: 100px; padding: 5px 14px; font-size: .72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+.sb-title { font-family: var(--font-head); font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 18px; }
+.sb-title em { font-style: normal; color: var(--accent); }
+.sb-desc { font-size: .92rem; color: var(--muted); line-height: 1.8; margin-bottom: 28px; }
+.sb-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.sb-features li { display: flex; align-items: flex-start; gap: 10px; font-size: .88rem; color: var(--text); }
+.sb-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.sb-visual {
+  background: var(--surface2); border: 1px solid var(--border); border-radius: 20px;
+  padding: 48px 40px; position: relative; overflow: hidden; min-height: 320px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.sb-visual-glow { position: absolute; top: -30%; right: -20%; width: 300px; height: 300px; border-radius: 50%; opacity: .5; }
+.sb-visual-icon { font-size: 5rem; position: absolute; top: 32px; right: 32px; opacity: .15; }
+.sb-visual-num { font-family: var(--font-head); font-size: 7rem; font-weight: 800; color: rgba(255,255,255,.04); line-height: 1; margin-bottom: -16px; }
+.sb-visual-label { font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; }
+.sb-visual-sub { font-size: .82rem; color: var(--muted); margin-top: 6px; }
+
+/* PRICING HINT */
+.pricing-note { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-top: 32px; display: flex; align-items: center; gap: 14px; }
+.pricing-note-icon { font-size: 1.2rem; }
+.pricing-note p { font-size: .83rem; color: var(--muted); }
+.pricing-note strong { color: var(--text); }
+
+/* TECH STACK */
+.tech-section { background: var(--surface); }
+.tech-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); gap: 2px; background: var(--border); margin-top: 48px; }
+.tech-item { background: var(--surface); padding: 28px 20px; text-align: center; }
+.tech-item .ti-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.tech-item .ti-name { font-family: var(--font-head); font-size: .8rem; font-weight: 700; color: var(--muted); }
+
+@media(max-width:900px) {
+  .service-block, .service-block.flip { grid-template-columns: 1fr; direction: ltr; gap: 40px; padding: 60px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-label">What We Offer</div>
+  <h1>Our <em>Services</em></h1>
+  <p>From digital marketing to custom software — we provide end-to-end digital solutions that drive growth for businesses of all sizes.</p>
+</section>
+
+<div id="marquee"></div>
+
+<!-- SERVICES -->
+<section>
+  <div class="services-full">
+
+    <!-- Digital Marketing -->
+    <div class="service-block reveal" id="digital-marketing">
+      <div>
+        <span class="sb-tag">01 — Digital Marketing</span>
+        <h2 class="sb-title">Grow Your Brand<br>with <em>Smart Marketing</em></h2>
+        <p class="sb-desc">We craft data-driven digital marketing strategies that get your business in front of the right people, at the right time, on the right platform.</p>
+        <ul class="sb-features">
+          <li>Search Engine Optimization (SEO)</li>
+          <li>Google Ads & PPC Campaigns</li>
+          <li>Social Media Marketing (Instagram, Facebook, LinkedIn)</li>
+          <li>Content Marketing & Copywriting</li>
+          <li>Email Marketing & Automation</li>
+          <li>Analytics & Performance Reporting</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Audit →</a>
+      </div>
+      <div class="sb-visual reveal">
+        <div class="sb-visual-glow" style="background:radial-gradient(circle,rgba(200,240,62,.3),transparent 70%);"></div>
+        <div class="sb-visual-icon">📣</div>
+        <div class="sb-visual-num">01</div>
+        <div class="sb-visual-label">Digital Marketing</div>
+        <div class="sb-visual-sub">SEO · Ads · Social · Content</div>
+      </div>
+    </div>
+
+    <!-- Shopify -->
+    <div class="service-block flip reveal" id="shopify">
+      <div>
+        <span class="sb-tag">02 — Shopify Development</span>
+        <h2 class="sb-title">Build a Store That<br><em>Actually Sells</em></h2>
+        <p class="sb-desc">We design and develop high-converting Shopify stores with stunning UI, fast load times, and a shopping experience your customers will love.</p>
+        <ul class="sb-features">
+          <li>Custom Shopify Theme Design & Development</li>
+          <li>Shopify Store Setup from Scratch</li>
+          <li>Payment Gateway Integration</li>
+          <li>Product Catalog & Inventory Management</li>
+          <li>Shopify Apps & Plugin Integration</li>
+          <li>Store Speed Optimization & SEO</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Start Your Store →</a>
+      </div>
+      <div class="sb-visual reveal">
+        <div class="sb-visual-glow" style="background:radial-gradient(circle,rgba(62,240,200,.25),transparent 70%);"></div>
+        <div class="sb-visual-icon">🛍️</div>
+        <div class="sb-visual-num">02</div>
+        <div class="sb-visual-label">Shopify Development</div>
+        <div class="sb-visual-sub">Design · Build · Launch · Scale</div>
+      </div>
+    </div>
+
+    <!-- Web Dev -->
+    <div class="service-block reveal" id="web-dev">
+      <div>
+        <span class="sb-tag">03 — Web Development</span>
+        <h2 class="sb-title">Websites Built to<br><em>Impress & Convert</em></h2>
+        <p class="sb-desc">From stunning landing pages to complex web applications — we build fast, responsive, and user-friendly websites that represent your brand at its best.</p>
+        <ul class="sb-features">
+          <li>Business & Corporate Websites</li>
+          <li>Landing Pages & Sales Funnels</li>
+          <li>CMS-Powered Websites (WordPress, etc.)</li>
+          <li>Web App Development</li>
+          <li>Responsive Design (Mobile-First)</li>
+          <li>Performance & Core Web Vitals Optimization</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Build Your Website →</a>
+      </div>
+      <div class="sb-visual reveal">
+        <div class="sb-visual-glow" style="background:radial-gradient(circle,rgba(200,240,62,.2),transparent 70%);"></div>
+        <div class="sb-visual-icon">💻</div>
+        <div class="sb-visual-num">03</div>
+        <div class="sb-visual-label">Web Development</div>
+        <div class="sb-visual-sub">Design · Code · Deploy · Optimize</div>
+      </div>
+    </div>
+
+    <!-- POS -->
+    <div class="service-block flip reveal" id="pos">
+      <div>
+        <span class="sb-tag">04 — Software & POS Systems</span>
+        <h2 class="sb-title">Software That<br><em>Works as Hard</em> as You Do</h2>
+        <p class="sb-desc">We develop custom software and Point of Sale systems that streamline your operations, eliminate manual errors, and help your business scale efficiently.</p>
+        <ul class="sb-features">
+          <li>Custom Point of Sale (POS) Systems</li>
+          <li>Inventory & Stock Management Software</li>
+          <li>Billing & Invoice Management</li>
+          <li>CRM & Customer Management Systems</li>
+          <li>Business Process Automation</li>
+          <li>ERP & Enterprise Solutions</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Automate Your Business →</a>
+      </div>
+      <div class="sb-visual reveal">
+        <div class="sb-visual-glow" style="background:radial-gradient(circle,rgba(62,200,240,.2),transparent 70%);"></div>
+        <div class="sb-visual-icon">🖥️</div>
+        <div class="sb-visual-num">04</div>
+        <div class="sb-visual-label">Software & POS</div>
+        <div class="sb-visual-sub">Custom · Scalable · Reliable</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="tech-section">
+  <div class="section-tag reveal">Technologies We Use</div>
+  <h2 class="section-title reveal">Built with the<br><em>Best Tools</em></h2>
+  <div class="tech-grid">
+    <div class="tech-item reveal"><div class="ti-icon">⚛️</div><div class="ti-name">React</div></div>
+    <div class="tech-item reveal"><div class="ti-icon">🟩</div><div class="ti-name">Node.js</div></div>
+    <div class="tech-item reveal"><div class="ti-icon">🛍️</div><div class="ti-name">Shopify</div></div>
+    <div class="tech-item reveal"><div class="ti-icon">🐘</div><div class="ti-name">PHP / Laravel</div></div>
+    <div class="tech-item reveal"><div class="ti-icon">🗄️</div><div class="ti-name">MySQL</div></div>
+    <div class="tech-item reveal"><div class="ti-icon">☁️</div><div class="ti-name">AWS / Cloud</div></div>
+    <div class="tech-item reveal"><div class="ti-icon">🔥</div><div class="ti-name">Firebase</div></div>
+    <div class="tech-item reveal"><div class="ti-icon">📊</div><div class="ti-name">Google Analytics</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner" style="background:var(--accent);padding:80px 6vw;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px);background-size:40px 40px;"></div>
+  <h2 style="font-family:var(--font-head);font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-1.5px;color:#000;position:relative;">Not Sure Which<br>Service You Need?</h2>
+  <p style="color:rgba(0,0,0,.6);font-size:1rem;margin-top:16px;position:relative;">Let's have a free consultation — we'll figure it out together.</p>
+  <a href="contact.html" style="background:#000;color:var(--accent);font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:16px 40px;border-radius:100px;text-decoration:none;display:inline-block;margin-top:32px;position:relative;">Book a Free Call →</a>
+</div>
+
+<script src="shared.js"></script>
+<script>
+  document.getElementById('marquee').innerHTML = MARQUEE_HTML;
+  initShared('services');
+</script>
+</body>
+</html>

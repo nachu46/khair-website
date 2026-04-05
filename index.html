@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Khair IT Solutions — Digital Growth Agency, Kozhikode</title>
+<meta name="description" content="Khair IT Solutions — Digital Marketing, Shopify Store Development, Web Development, and Software & POS Systems based in Kozhikode, Kerala."/>
+<link rel="stylesheet" href="shared.css"/>
+<style>
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 140px 6vw 80px;
+  position: relative; overflow: hidden;
+}
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px); background-size: 60px 60px; opacity: .32; }
+.hero-glow { position: absolute; top: -10%; left: 45%; width: 700px; height: 700px; background: radial-gradient(circle,rgba(200,240,62,.09) 0%,transparent 70%); pointer-events: none; }
+.hero-glow2 { position: absolute; bottom: -20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle,rgba(62,240,200,.05) 0%,transparent 70%); pointer-events: none; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--surface2); border: 1px solid var(--border); border-radius: 100px;
+  padding: 6px 16px; font-size: .75rem; color: var(--accent); font-weight: 600;
+  letter-spacing: .8px; text-transform: uppercase; margin-bottom: 28px; position: relative;
+}
+.hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+
+h1.hero-title {
+  font-family: var(--font-head); font-size: clamp(3.2rem, 7.5vw, 8rem);
+  font-weight: 800; line-height: .93; letter-spacing: -3px;
+  max-width: 950px; position: relative;
+}
+h1.hero-title .accent { color: var(--accent); }
+.hero-sub { margin-top: 28px; font-size: 1.05rem; color: var(--muted); max-width: 480px; line-height: 1.78; position: relative; }
+.hero-actions { margin-top: 44px; display: flex; gap: 14px; flex-wrap: wrap; position: relative; }
+.hero-stats { margin-top: 80px; display: grid; grid-template-columns: repeat(4,1fr); gap: 0; position: relative; border-top: 1px solid var(--border); }
+.stat { padding: 32px 0; border-right: 1px solid var(--border); }
+.stat:last-child { border-right: none; }
+.stat-num { font-family: var(--font-head); font-size: 2.6rem; font-weight: 800; color: var(--accent); }
+.stat-label { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+/* ── SERVICES HOME ── */
+.services-intro { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 20px; }
+.services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: var(--border); }
+.service-card {
+  background: var(--bg); padding: 44px 36px;
+  position: relative; overflow: hidden;
+  transition: background .3s; cursor: default;
+}
+.service-card:hover { background: var(--surface2); }
+.sc-line { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
+.service-card:hover .sc-line { transform: scaleX(1); }
+.sc-num { font-family: var(--font-head); font-size: .7rem; font-weight: 700; color: var(--muted); letter-spacing: 2px; margin-bottom: 20px; }
+.sc-icon { font-size: 2.2rem; margin-bottom: 18px; }
+.sc-name { font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+.sc-desc { font-size: .88rem; color: var(--muted); line-height: 1.72; }
+.sc-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 22px; font-size: .82rem; font-weight: 600; color: var(--accent); text-decoration: none; opacity: 0; transform: translateY(6px); transition: opacity .3s, transform .3s; }
+.service-card:hover .sc-link { opacity: 1; transform: translateY(0); }
+
+/* ── METRICS ── */
+.metrics-section { background: var(--surface); }
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 2px; background: var(--border); margin-top: 52px; }
+.metric-card { background: var(--surface); padding: 36px 28px; }
+.metric-big { font-family: var(--font-head); font-size: 3rem; font-weight: 800; color: var(--accent); }
+.metric-label { font-size: .8rem; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+
+/* ── WHY ── */
+.why-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.why-desc { margin-top: 18px; font-size: .95rem; color: var(--muted); line-height: 1.8; }
+.why-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.pill { background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; padding: 8px 18px; font-size: .8rem; font-weight: 500; color: var(--text); }
+.why-image { background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; padding: 48px 36px; display: flex; flex-direction: column; gap: 16px; }
+.why-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--bg); border-radius: 12px; border: 1px solid var(--border); }
+.why-item-icon { font-size: 1.4rem; flex-shrink: 0; }
+.why-item-text h4 { font-family: var(--font-head); font-size: .95rem; font-weight: 700; margin-bottom: 4px; }
+.why-item-text p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+
+/* ── PROCESS ── */
+.process-bg { background: var(--surface); }
+.process-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 64px; position: relative; }
+.process-steps::before { content: ''; position: absolute; top: 27px; left: 0; right: 0; height: 1px; background: var(--border); }
+.step { padding: 0 24px 0 0; }
+.step-circle { width: 54px; height: 54px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: .78rem; font-weight: 700; color: var(--accent); margin-bottom: 24px; position: relative; z-index: 1; transition: background .3s, border-color .3s; }
+.step:hover .step-circle { background: var(--accent); color: #000; border-color: var(--accent); }
+.step-name { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.step-desc { font-size: .82rem; color: var(--muted); line-height: 1.65; }
+
+/* ── TESTIMONIALS ── */
+.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 52px; }
+.testi-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; transition: border-color .3s; }
+.testi-card:hover { border-color: rgba(200,240,62,.3); }
+.testi-stars { color: var(--accent); font-size: .85rem; letter-spacing: 2px; margin-bottom: 16px; }
+.testi-text { font-size: .9rem; color: var(--text); line-height: 1.75; margin-bottom: 24px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-av { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg,var(--accent),var(--accent2)); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-weight: 700; font-size: .82rem; color: #000; flex-shrink: 0; }
+.testi-name { font-family: var(--font-head); font-size: .88rem; font-weight: 700; }
+.testi-role { font-size: .75rem; color: var(--muted); }
+
+/* ── CTA BANNER ── */
+.cta-banner { background: var(--accent); padding: 80px 6vw; text-align: center; position: relative; overflow: hidden; }
+.cta-banner::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px); background-size: 40px 40px; }
+.cta-banner h2 { font-family: var(--font-head); font-size: clamp(2rem,5vw,4rem); font-weight: 800; letter-spacing: -1.5px; color: #000; position: relative; line-height: 1.05; }
+.cta-banner p { color: rgba(0,0,0,.6); font-size: 1rem; margin-top: 16px; position: relative; }
+.cta-banner .btn-dark { background: #000; color: var(--accent); font-family: var(--font-head); font-weight: 700; font-size: .95rem; padding: 16px 40px; border-radius: 100px; text-decoration: none; display: inline-block; margin-top: 32px; position: relative; transition: transform .2s; }
+.cta-banner .btn-dark:hover { transform: translateY(-2px); }
+
+@media(max-width:900px) {
+  .hero-stats { grid-template-columns: repeat(2,1fr); }
+  .stat { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .services-grid, .why-wrap, .process-steps { grid-template-columns: 1fr; }
+  .process-steps::before { display: none; }
+  .testi-grid { grid-template-columns: 1fr; }
+  h1.hero-title { letter-spacing: -2px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-badge"><span class="hero-badge-dot"></span>Digital Growth Agency · Kozhikode, Kerala</div>
+  <h1 class="hero-title">
+    Your Path to<br>
+    <span class="accent">Digital Success</span>
+  </h1>
+  <p class="hero-sub">We build, brand, and grow your business online — from stunning websites to powerful Shopify stores, smart software, and data-driven digital marketing.</p>
+  <div class="hero-actions">
+    <a href="services.html" class="btn-primary">Explore Services</a>
+    <a href="contact.html" class="btn-ghost">Let's Talk →</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Projects Delivered</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Client Satisfaction</div></div>
+    <div class="stat"><div class="stat-num">4+</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Support Available</div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div id="marquee"></div>
+
+<!-- SERVICES -->
+<section id="services-home">
+  <div class="services-intro">
+    <div>
+      <div class="section-tag reveal">What We Do</div>
+      <h2 class="section-title reveal">We Build, Brand &<br><em>Grow</em> Your Business</h2>
+    </div>
+    <a href="services.html" class="btn-ghost reveal">All Services →</a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="sc-num">01</div>
+      <div class="sc-icon">📣</div>
+      <div class="sc-name">Digital Marketing</div>
+      <p class="sc-desc">SEO, Google Ads, social media campaigns, and content strategy that drives real traffic and real sales for your business.</p>
+      <a href="services.html#digital-marketing" class="sc-link">Learn more →</a>
+      <div class="sc-line"></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="sc-num">02</div>
+      <div class="sc-icon">🛍️</div>
+      <div class="sc-name">Shopify Development</div>
+      <p class="sc-desc">Custom Shopify stores built for conversions — beautiful design, fast performance, and seamless shopping experience.</p>
+      <a href="services.html#shopify" class="sc-link">Learn more →</a>
+      <div class="sc-line"></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="sc-num">03</div>
+      <div class="sc-icon">💻</div>
+      <div class="sc-name">Web Development</div>
+      <p class="sc-desc">Modern, responsive websites and web applications tailored to your goals — from landing pages to full enterprise portals.</p>
+      <a href="services.html#web-dev" class="sc-link">Learn more →</a>
+      <div class="sc-line"></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="sc-num">04</div>
+      <div class="sc-icon">🖥️</div>
+      <div class="sc-name">Software & POS Systems</div>
+      <p class="sc-desc">Custom software solutions and Point of Sale systems to streamline operations, manage inventory, and boost efficiency.</p>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <a href="services.html#pos" class="sc-link">Learn more →</a>
+        <a href="https://khair-billing-software.vercel.app/login" target="_blank" class="sc-link" style="color:var(--text); opacity:1; transform:none; text-decoration:underline;">Open POS System ↗</a>
+      </div>
+      <div class="sc-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="metrics-section" id="metrics">
+  <div class="section-tag reveal">Our Impact</div>
+  <h2 class="section-title reveal">Results That<br><em>Speak for Themselves</em></h2>
+  <div class="metrics-grid">
+    <div class="metric-card reveal"><div class="metric-big">1M+</div><div class="metric-label">Organic views generated<br>for clients</div></div>
+    <div class="metric-card reveal"><div class="metric-big">#1</div><div class="metric-label">Google rankings<br>achieved</div></div>
+    <div class="metric-card reveal"><div class="metric-big">3×</div><div class="metric-label">Average revenue growth<br>for e-commerce clients</div></div>
+    <div class="metric-card reveal"><div class="metric-big">50+</div><div class="metric-label">Successful projects<br>completed</div></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="why-wrap">
+    <div>
+      <div class="section-tag reveal">Why Choose Us</div>
+      <h2 class="section-title reveal">We Don't Just<br>Deliver — We <em>Grow</em></h2>
+      <p class="why-desc reveal">At Khair IT Solutions, every decision is driven by your growth. We combine strategy, design, and technology to build digital experiences that convert.</p>
+      <div class="why-pills reveal">
+        <span class="pill">Result-Oriented</span>
+        <span class="pill">Transparent Pricing</span>
+        <span class="pill">On-Time Delivery</span>
+        <span class="pill">Dedicated Support</span>
+        <span class="pill">Custom Solutions</span>
+        <span class="pill">Proven Strategies</span>
+      </div>
+      <a href="about.html" class="btn-ghost reveal" style="margin-top:32px;">About Our Team →</a>
+    </div>
+    <div class="why-image reveal">
+      <div class="why-item">
+        <div class="why-item-icon">🎯</div>
+        <div class="why-item-text">
+          <h4>Goal-Driven Approach</h4>
+          <p>Every strategy is aligned with your specific business goals and KPIs.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">⚡</div>
+        <div class="why-item-text">
+          <h4>Fast Turnaround</h4>
+          <p>We move fast without sacrificing quality — your time matters.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">🔍</div>
+        <div class="why-item-text">
+          <h4>Data-Backed Decisions</h4>
+          <p>Every campaign, every design, every decision is backed by real data.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">🤝</div>
+        <div class="why-item-text">
+          <h4>Long-Term Partnership</h4>
+          <p>We grow with you — not just for a project, but for the long run.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process-bg">
+  <div class="section-tag reveal">How We Work</div>
+  <h2 class="section-title reveal">Our Simple,<br><em>Proven Process</em></h2>
+  <div class="process-steps">
+    <div class="step reveal">
+      <div class="step-circle">01</div>
+      <div class="step-name">Discovery</div>
+      <p class="step-desc">We learn about your business, goals, and audience to shape the right strategy from the ground up.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">02</div>
+      <div class="step-name">Strategy</div>
+      <p class="step-desc">A tailored plan is created — website, store, marketing campaign, or software solution.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">03</div>
+      <div class="step-name">Build & Execute</div>
+      <p class="step-desc">Our team delivers with precision — design, development, and deployment done right.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-circle">04</div>
+      <div class="step-name">Grow & Support</div>
+      <p class="step-desc">We monitor, optimize, and provide ongoing support for your long-term success.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-tag reveal">Client Stories</div>
+  <h2 class="section-title reveal">Our Work<br><em>Speaks for Itself</em></h2>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Khair IT Solutions transformed our online presence completely. Our Shopify store is now generating 3× more revenue. Absolutely brilliant team."</p>
+      <div class="testi-author">
+        <div class="testi-av">AK</div>
+        <div><div class="testi-name">Ahmed K.</div><div class="testi-role">Founder, StyleHub Store</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Their digital marketing team got us to #1 on Google in just 4 months. The leads we're getting now are incredible. Highly recommended!"</p>
+      <div class="testi-author">
+        <div class="testi-av">PR</div>
+        <div><div class="testi-name">Priya R.</div><div class="testi-role">Owner, Spice Garden Restaurant</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"The POS system they built for us is seamless. No more manual errors, everything is automated. Best investment for our retail chain."</p>
+      <div class="testi-author">
+        <div class="testi-av">MN</div>
+        <div><div class="testi-name">Mohammed N.</div><div class="testi-role">Director, NexRetail Group</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Ready to Grow<br>Your Business?</h2>
+  <p>Let's build something remarkable together. Reach out today.</p>
+  <a href="contact.html" class="btn-dark">Start a Conversation →</a>
+</div>
+
+<script src="shared.js"></script>
+<script>
+  document.getElementById('marquee').innerHTML = MARQUEE_HTML;
+  initShared('index');
+</script>
+</body>
+</html>
