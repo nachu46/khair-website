@@ -67,7 +67,7 @@ const FOOTER_HTML = `
   </div>
   <div class="footer-bottom">
     <p>© 2025 Khair IT Solutions. All rights reserved.</p>
-    <p style="color:var(--muted);font-size:.75rem;">Designed & Built with ❤️ in Kerala</p>
+    <p style="color:var(--muted);font-size:.75rem;">Designed & Built with <i data-lucide="heart" style="width:12px;height:12px;color:#ff4b4b;fill:#ff4b4b;"></i> in Kerala</p>
   </div>
 </footer>
 <a href="https://wa.me/919061627236?text=Hi%20Khair%20IT%20Solutions%2C%20I%27m%20interested%20in%20your%20services!" class="wa-float" target="_blank" rel="noopener" title="Chat on WhatsApp">
@@ -122,6 +122,14 @@ function initShared(activePage) {
   mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     ham.classList.remove('open'); mob.classList.remove('open');
   }));
+
+  // load lucide for modern iconography instead of emojis
+  const s = document.createElement('script');
+  s.src = 'https://unpkg.com/lucide@latest';
+  s.onload = () => {
+    if(window.lucide) lucide.createIcons();
+  };
+  document.head.appendChild(s);
 
   // reveal on scroll
   const reveals = document.querySelectorAll('.reveal');

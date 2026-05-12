@@ -12,6 +12,7 @@
   --font-head: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 }
+.lucide { width: 1em; height: 1em; stroke-width: 2px; display: inline-block; vertical-align: text-bottom; }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
