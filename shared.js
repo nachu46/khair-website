@@ -32,10 +32,10 @@ const FOOTER_HTML = `
       <a href="index.html" class="logo">Khair<span>.</span>IT</a>
       <p>Your trusted digital growth partner. We build, brand, and market businesses that win online.</p>
       <div class="social-row" style="margin-top:20px;">
-        <a href="#" class="social-btn">in</a>
-        <a href="#" class="social-btn">ig</a>
-        <a href="#" class="social-btn">fb</a>
-        <a href="#" class="social-btn">yt</a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
     <div class="footer-col">
@@ -130,6 +130,12 @@ function initShared(activePage) {
     if(window.lucide) lucide.createIcons();
   };
   document.head.appendChild(s);
+
+  // load fontawesome for authentic brand logos
+  const fa = document.createElement('link');
+  fa.rel = 'stylesheet';
+  fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+  document.head.appendChild(fa);
 
   // reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
