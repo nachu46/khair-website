@@ -32,8 +32,8 @@ const FOOTER_HTML = `
       <a href="index.html" class="logo">Khair<span>.</span>IT</a>
       <p>Your trusted digital growth partner. We build, brand, and market businesses that win online.</p>
       <div class="social-row" style="margin-top:20px;">
-        <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://in.linkedin.com/in/muhammed-nazuk-a78414275" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/nazuk.kasim/" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
         <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
       </div>
