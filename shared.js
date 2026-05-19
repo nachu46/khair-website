@@ -2,26 +2,26 @@
 
 const NAV_HTML = `
 <nav id="main-nav">
-  <a href="index.html" class="logo">Khair<span>.</span>IT</a>
+  <a href="index" class="logo">Khair<span>.</span>IT</a>
   <ul class="nav-links">
-    <li><a href="index.html" data-page="index">Home</a></li>
-    <li><a href="services.html" data-page="services">Services</a></li>
-    <li><a href="about.html" data-page="about">About</a></li>
-    <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
-    <li><a href="contact.html" data-page="contact">Contact</a></li>
+    <li><a href="index" data-page="index">Home</a></li>
+    <li><a href="services" data-page="services">Services</a></li>
+    <li><a href="about" data-page="about">About</a></li>
+    <li><a href="portfolio" data-page="portfolio">Portfolio</a></li>
+    <li><a href="contact" data-page="contact">Contact</a></li>
   </ul>
   <a href="https://khair-billing-software.vercel.app" target="_blank" class="nav-cta" style="background:var(--bg); border:1px solid var(--border); color:var(--text); margin-right:12px;">Open POS →</a>
-  <a href="contact.html" class="nav-cta">Let's Talk</a>
+  <a href="contact" class="nav-cta">Let's Talk</a>
   <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </div>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
+  <a href="index">Home</a>
+  <a href="services">Services</a>
+  <a href="about">About</a>
+  <a href="portfolio">Portfolio</a>
+  <a href="contact">Contact</a>
   <a href="https://khair-billing-software.vercel.app" target="_blank" style="color:var(--accent);">Open POS →</a>
 </div>`;
 
@@ -29,7 +29,7 @@ const FOOTER_HTML = `
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <a href="index.html" class="logo">Khair<span>.</span>IT</a>
+      <a href="index" class="logo">Khair<span>.</span>IT</a>
       <p>Your trusted digital growth partner. We build, brand, and market businesses that win online.</p>
       <div class="social-row" style="margin-top:20px;">
         <a href="https://in.linkedin.com/in/muhammed-nazuk-a78414275" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -41,19 +41,19 @@ const FOOTER_HTML = `
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
-        <li><a href="services.html#shopify">Shopify Development</a></li>
-        <li><a href="services.html#web-dev">Web Development</a></li>
-        <li><a href="services.html#pos">Software & POS</a></li>
+        <li><a href="services#digital-marketing">Digital Marketing</a></li>
+        <li><a href="services#shopify">Shopify Development</a></li>
+        <li><a href="services#web-dev">Web Development</a></li>
+        <li><a href="services#pos">Software & POS</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
       <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="portfolio.html">Our Work</a></li>
-        <li><a href="index.html#process">Process</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about">About Us</a></li>
+        <li><a href="portfolio">Our Work</a></li>
+        <li><a href="index#process">Process</a></li>
+        <li><a href="contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -109,7 +109,7 @@ function initShared(activePage) {
 
   // Only show contact buttons/links in the header if it's the home page (index)
   if (activePage !== 'index') {
-    const contactCta = document.querySelector('nav a[href="contact.html"].nav-cta');
+    const contactCta = document.querySelector('nav a[href="contact"].nav-cta');
     if (contactCta) contactCta.style.display = 'none';
 
     const contactNavLink = document.querySelector('.nav-links a[data-page="contact"]');
@@ -118,7 +118,7 @@ function initShared(activePage) {
       if (contactLi) contactLi.style.display = 'none';
     }
 
-    const contactMobileLink = document.querySelector('.mobile-menu a[href="contact.html"]');
+    const contactMobileLink = document.querySelector('.mobile-menu a[href="contact"]');
     if (contactMobileLink) contactMobileLink.style.display = 'none';
   }
 
