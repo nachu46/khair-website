@@ -61,7 +61,6 @@ const FOOTER_HTML = `
       <ul>
         <li><a href="mailto:muhammednazuk@gmail.com">muhammednazuk@gmail.com</a></li>
         <li><a href="tel:+919061627236">+91 90616 27236</a></li>
-        <li><a href="#">Kozhikode, Kerala, India</a></li>
       </ul>
     </div>
   </div>
