@@ -107,6 +107,21 @@ function initShared(activePage) {
     if (a.dataset.page === activePage) a.classList.add('active');
   });
 
+  // Only show contact buttons/links in the header if it's the home page (index)
+  if (activePage !== 'index') {
+    const contactCta = document.querySelector('nav a[href="contact.html"].nav-cta');
+    if (contactCta) contactCta.style.display = 'none';
+
+    const contactNavLink = document.querySelector('.nav-links a[data-page="contact"]');
+    if (contactNavLink) {
+      const contactLi = contactNavLink.closest('li');
+      if (contactLi) contactLi.style.display = 'none';
+    }
+
+    const contactMobileLink = document.querySelector('.mobile-menu a[href="contact.html"]');
+    if (contactMobileLink) contactMobileLink.style.display = 'none';
+  }
+
   // scroll nav
   window.addEventListener('scroll', () => {
     document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 60);
