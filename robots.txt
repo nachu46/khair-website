@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://khairitsolutions.com/sitemap.xml
+Sitemap: https://khairitsoluton.com/sitemap.xml

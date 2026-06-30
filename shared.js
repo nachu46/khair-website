@@ -10,7 +10,7 @@ const NAV_HTML = `
     <li><a href="portfolio" data-page="portfolio">Portfolio</a></li>
     <li><a href="contact" data-page="contact">Contact</a></li>
   </ul>
-  <a href="https://khair-billing-software.vercel.app" target="_blank" class="nav-cta" style="background:var(--bg); border:1px solid var(--border); color:var(--text); margin-right:12px;">Open POS →</a>
+  <a href="https://pos.khairitsoluton.com" target="_blank" class="nav-cta" style="background:var(--bg); border:1px solid var(--border); color:var(--text); margin-right:12px;">Open POS →</a>
   <a href="contact" class="nav-cta">Let's Talk</a>
   <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
@@ -22,7 +22,7 @@ const NAV_HTML = `
   <a href="about">About</a>
   <a href="portfolio">Portfolio</a>
   <a href="contact">Contact</a>
-  <a href="https://khair-billing-software.vercel.app" target="_blank" style="color:var(--accent);">Open POS →</a>
+  <a href="https://pos.khairitsoluton.com" target="_blank" style="color:var(--accent);">Open POS →</a>
 </div>`;
 
 const FOOTER_HTML = `
